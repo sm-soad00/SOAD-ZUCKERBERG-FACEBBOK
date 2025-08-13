@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basics -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Founder of Facebook Official App — SOAD Zuckerberg</title>
+  <meta name="description" content="SOAD Zuckerberg — Bangladeshi creator persona. Premium hacker-style fun/parody page. Not affiliated with Meta." />
+  <meta name="author" content="SOAD Zuckerberg" />
+  <link rel="canonical" href="https://your-domain.example/" />
+
+  <!-- Google Verification (replace content=...) -->
+  <meta name="google-site-verification" content="PASTE_YOUR_VERIFICATION_CODE_HERE" />
+
+  <!-- Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Founder of Facebook Official App — SOAD Zuckerberg" />
+  <meta property="og:description" content="Premium hacker-style fun/parody profile." />
+  <meta property="og:url" content="https://your-domain.example/" />
+  <meta property="og:image" content="https://your-domain.example/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root{
+      --bg:#000; --fg:#00ff88; --fg-soft:#b7ffd9; --glass:rgba(0,0,0,.55);
+      --shadow:0 0 30px rgba(0,255,136,.35), inset 0 0 30px rgba(0,255,136,.12);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--fg);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+      overflow:hidden;
+    }
+
+    /* Matrix rain */
+    canvas#matrix{position:fixed; inset:0; z-index:-1; filter:brightness(.9) saturate(1.1)}
+    .grid-overlay{
+      position:fixed; inset:0; background:
+        linear-gradient(180deg, rgba(0,255,136,.05) 1px, transparent 1px) 0 0/22px 22px,
+        linear-gradient( 90deg, rgba(0,255,136,.05) 1px, transparent 1px) 0 0/22px 22px;
+      animation:bgscroll 40s linear infinite; z-index:-1;
+    }
+    @keyframes bgscroll{to{background-position:200% 200%}}
+
+    /* Card */
+    .wrap{min-height:100dvh; display:grid; place-items:center; padding:24px}
+    .card{
+      width:min(780px, calc(100vw - 32px));
+      border:1px solid rgba(0,255,136,.35);
+      background:var(--glass);
+      border-radius:20px; padding:28px 22px;
+      box-shadow:var(--shadow); backdrop-filter: blur(8px);
+      position:relative; overflow:hidden;
+    }
+    .glow{position:absolute; inset:-2px; border-radius:22px; pointer-events:none;
+      box-shadow:0 0 70px rgba(0,255,136,.25);}
+    .badge{
+      display:inline-block; padding:6px 10px; border:1px dashed var(--fg);
+      border-radius:999px; font-size:12px; letter-spacing:.12em; opacity:.9;
+    }
+    .row{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
+
+    /* Avatar + heading */
+    .avatar{
+      width:110px; height:110px; border-radius:50%; object-fit:cover;
+      border:3px dashed var(--fg); box-shadow:0 0 16px rgba(0,255,136,.5);
+      background:#001b12;
+    }
+    h1{
+      font-size: clamp(26px, 5.2vw, 52px);
+      margin: 10px 0 6px; line-height:1.1; text-transform:uppercase;
+      letter-spacing:.06em; text-shadow: 0 0 8px rgba(0,255,136,.6);
+    }
+    .typing{border-right:2px solid var(--fg); white-space:nowrap; overflow:hidden; display:inline-block;
+      animation: typing 3.2s steps(22,end) forwards, caret 700ms steps(1,end) infinite;}
+    @keyframes typing{from{width:0} to{width:22ch}}
+    @keyframes caret{50%{border-color:transparent}}
+
+    .glitch{position:relative; display:inline-block}
+    .glitch::before,.glitch::after{
+      content:attr(data-text); position:absolute; left:0; top:0; width:100%;
+    }
+    .glitch::before{transform:translate(2px,0); clip-path: polygon(0 0,100% 0,100% 45%,0 45%);
+      opacity:.6; filter:drop-shadow(0 0 6px var(--fg-soft));}
+    .glitch::after{transform:translate(-2px,0); clip-path: polygon(0 55%,100% 55%,100% 100%,0 100%);
+      opacity:.6; filter:drop-shadow(0 0 6px var(--fg-soft));}
+    .subtitle{margin:2px 0 16px; opacity:.9}
+
+    /* Text + buttons */
+    .copy{margin:12px 0; line-height:1.65; color:var(--fg-soft)}
+    .cta{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 14px;
+      border:1px solid var(--fg); border-radius:14px; text-decoration:none; color:var(--fg);
+      box-shadow: inset 0 0 12px rgba(0,255,136,.15), 0 0 10px rgba(0,255,136,.15);
+      transition:transform .15s ease, box-shadow .2s ease; font-weight:700;
+    }
+    .cta:hover{transform:translateY(-1px); box-shadow:0 0 20px rgba(0,255,136,.35), inset 0 0 14px rgba(0,255,136,.2)}
+    .cta small{opacity:.8; font-weight:600}
+
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
+    .chip{border:1px solid rgba(0,255,136,.35); padding:6px 10px; border-radius:999px; font-size:12px}
+
+    .disclaimer{
+      margin-top:10px; font-size:12px; opacity:.75;
+      border:1px solid rgba(255,255,255,.22); border-radius:12px; padding:10px 12px;
+      background:rgba(255,255,255,.03)
+    }
+    footer{margin-top:12px; opacity:.7; font-size:12px}
+  </style>
+
+  <!-- Schema.org Person (fun/parody style; helps Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "SOAD Zuckerberg",
+    "alternateName": "Soad Z.",
+    "url": "https://your-domain.example/",
+    "image": "https://your-domain.example/profile.jpg",
+    "description": "SOAD Zuckerberg is a Bangladeshi creator persona. This is a profile — not affiliated with Meta or Mark Zuckerberg.",
+    "nationality": "Bangladesh",
+    "sameAs": [
+      "https://facebook.com/your.profile",
+      "https://instagram.com/your.profile"
+    ],
+    "disambiguatingDescription": "Parody/fun character; no affiliation with Meta; not the owner of Facebook."
+  }
+  </script>
+</head>
+<body>
+  <!-- Matrix rain -->
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <section class="card" role="region" aria-label="SOAD Zuckerberg profile">
+      <span class="glow" aria-hidden="true"></span>
+
+      <div class="row">
+        <span class="badge">SM-SOAD</span>
+      </div>
+
+      <div class="row" style="margin-top:14px">
+        <img class="avatar" src="profile.jpg" alt="SOAD Zuckerberg avatar">
+        <div>
+          <h1>
+            <span class="typing">
+              <span class="glitch" data-text="SOAD ZUCKERBERG">SOAD ZUCKERBERG</span>
+            </span>
+          </h1>
+          <div class="subtitle">Founder of “Facebook Official App” </div>
+        </div>
+      </div>
+
+      <p class="copy">
+        He’s known as the “Bangladeshi Zuckerberg” among friends — a playful persona who loves
+        apps, scale, and clean product thinking. This premium hacker aesthetic page 
+        .
+      </p>
+
+      <p class="copy">
+        Need help with anything? <strong>Contact him on Facebook</strong> and get a quick response.
+      </p>
+
+      <div class="row" style="margin-top:10px">
+        <!-- Replace with your real Facebook URL -->
+        <a class="cta" href="https://facebook.com/your.profile" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook profile">
+          <span>Facebook</span><small>↗</small>
+        </a>
+        <a class="cta" href="mailto:you@example.com" aria-label="Send email">
+          <span>Email</span><small>✉</small>
+        </a>
+      </div>
+
+      <div class="chips">
+        <span class="chip">Matrix Aesthetic</span>
+        <span class="chip">Security • UI Engineering</span>
+        <span class="chip">Bangladesh • Global</span>
+      </div>
+
+      <div class="disclaimer">
+        Disclaimer: This site is a official profile. It is not affiliated with Meta Platforms, Inc.
+        or Mark Zuckerberg.
+      </div>
+
+      <footer>© <span id="year"></span> SOAD Zuckerberg — official</footer>
+    </section>
+  </main>
+
+  <script>
+    // Matrix rain background
+    (function(){
+      const c = document.getElementById('matrix'), ctx = c.getContext('2d');
+      let w,h; function resize(){w=c.width=innerWidth; h=c.height=innerHeight}
+      resize(); addEventListener('resize', resize);
+      const colSize=18; const cols=()=>Math.floor(w/colSize);
+      let drops=new Array(cols()).fill(0);
+      const glyphs='01abcdefghijklmnopqrstuvwxyz#$%&*+=-<>[]{}';
+      function draw(){
+        ctx.fillStyle='rgba(0,0,0,0.08)'; ctx.fillRect(0,0,w,h);
+        ctx.fillStyle='#00ff88'; ctx.font='16px monospace';
+        if(drops.length!==cols()) drops=new Array(cols()).fill(0);
+        for(let i=0;i<drops.length;i++){
+          const txt=glyphs[Math.floor(Math.random()*glyphs.length)];
+          ctx.fillText(txt, i*colSize, drops[i]*colSize);
+          if(drops[i]*colSize>h && Math.random()>0.975) drops[i]=0;
+          drops[i]++;
+        }
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
